@@ -26,23 +26,6 @@ body {
     transform: rotate(180deg);
 }
 
-.padding-top-10 {
-    padding-top: 10px;
-}
-
-.full-width {
-    width: 100%;
-}
-
-.full-height {
-    height: 100%;
-}
-
-.full-size {
-    width: 100%;
-    height: 100%;
-}
-
 .left-menu {
     display: flex;
     background-color: #e2e8f0
@@ -51,33 +34,6 @@ body {
 .right-menu {
     display: flex;
     flex-direction: row-reverse;
-}
-
-.horizontal-center {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.vertical-center {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.center {
-    margin: auto;
-}
-
-.center-content {
-    display: flex;
-    align-items: center;
-}
-
-.text-center {
-    text-align: center
-}
-
-.no-decoration {
-    text-decoration: none;
 }
 
 .reservation-box {
@@ -90,40 +46,13 @@ body {
 
 }
 
-.search-box {
+#search-box {
     width: 703px;
     height: 60px;
 }
 
-.flex-container {
-    display: flex;
-}
 
-.flex-space-between {
-    justify-content: space-between;
-}
-
-.row-flex {
-    flex-direction: row;
-}
-
-.col-flex {
-    flex-direction: column;
-}
-
-.white-background {
-    background-color: white;
-}
-
-.row-reverse-flex {
-    flex-direction: row-reverse;
-}
-
-.no-border {
-    border: none;
-}
-
-.search-btn {
+#search-btn {
     background-color: #fb815e;
     width: 183px;
 }
@@ -136,37 +65,11 @@ body {
     width: 176px;
 }
 
-.rounded-border-5 {
-    border-radius: 5px;
-}
 
-.rounded-border-10 {
-    border-radius: 10px;
-}
-
-.rounded-border-15 {
-    border-radius: 15px;
-}
-
-.rounded-border-20 {
-    border-radius: 20px;
-}
-
-
-.left-rounded-border-15 {
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-
-.right-rounded-border-15 {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
 
 .specialties-box {
     width: 902px;
-    height: 150px;
+    height: 300px;
 }
 
 .specialty {
@@ -183,38 +86,46 @@ body {
     height: 85px;
 }
 
-.purple-background {
-    background-color: rgb(232, 201, 253);
+#patient-comments-section {
+    width: 1184px;
+    height: 730px;
 }
 
-.red-background {
-    background-color: rgb(252, 186, 186);
+
+#patient-comment-box {
+    border: 1px solid #1780df;
+    background-color: #e5f2fe;
+    width: 562px;
+    height: 370px;
 }
 
-.green-background {
-    background-color: rgb(179, 232, 202);
+#patient-comment {
+    height: 70%;
 }
 
-.blue-background {
-    background-color: rgb(171, 194, 216);
+#commented-dr-box {
+    height: 30%;
+    border-top: 2px dashed #1780df;
 }
 
-.pink-background {
-    background-color: rgb(251, 203, 238);
+
+#commented-dr-profile {
+    width: 70%;
+    /*padding-right: 20px;*/
 }
 
-.cyan-background {
-    background-color: rgb(197, 225, 251);
+#comments-btn {
+    color: white;
+    background-color: #fb815e;
+    width: 146px;
+    height: 38px;
 }
 
-.orange-background {
-    background-color: rgb(253, 205, 176);
+.commented-dr-profile-photo {
+    width: 75px;
+    height: 75px;
 }
 
-.img-container {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
+
 
 
