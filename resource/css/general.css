@@ -151,6 +151,10 @@
     background-color: rgb(253, 205, 176);
 }
 
+.white-color {
+    color: white;
+}
+
 .img-container {
     display: table-cell;
     text-align: center;
@@ -159,4 +163,20 @@
 
 .my-btn:hover {
     cursor: pointer;
+}
+
+.my-btn-block {
+    width: 100%;
+}
+
+.rtl-direction {
+    direction: rtl;
+}
+
+.ltr-direction {
+    direction: ltr;
+}
+
+.overflow-auto {
+    overflow: auto;
 }
