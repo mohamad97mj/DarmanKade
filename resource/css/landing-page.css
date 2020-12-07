@@ -52,8 +52,11 @@ body {
 }
 
 
-#search-btn {
+.orange-btn {
     background-color: #fb815e;
+}
+
+#search-btn {
     width: 183px;
 }
 
@@ -64,7 +67,6 @@ body {
 .location-select {
     width: 176px;
 }
-
 
 
 .specialties-box {
@@ -116,7 +118,6 @@ body {
 
 #comments-btn {
     color: white;
-    background-color: #fb815e;
     width: 146px;
     height: 38px;
 }
@@ -137,10 +138,23 @@ body {
 
 .request-service-btn {
     color: white;
-    background-color: #fb815e;
     width: 320px;
     height: 72px;
 }
 
 
+.section-margin {
+    margin-bottom: 100px;
+}
+
+#enter-number-box {
+    width: 246px;
+    height: 50px;
+    border: 1px solid #ced4da
+}
+
+#send-link-btn {
+    width: 150px;
+    height: 60px;
+}
 
