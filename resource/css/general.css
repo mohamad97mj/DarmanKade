@@ -15,8 +15,16 @@
     padding-top: 10px;
 }
 
+.padding-top-30 {
+    padding-top: 30px;
+}
+
 .half-width {
     width: 50%;
+}
+
+.one-third-width {
+    width: 33%;
 }
 
 .full-width {
@@ -50,6 +58,10 @@
 .center-content {
     display: flex;
     align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
 }
 
 .text-center {
@@ -161,7 +173,7 @@
     vertical-align: middle;
 }
 
-.my-btn:hover {
+.clickable:hover {
     cursor: pointer;
 }
 
@@ -179,4 +191,20 @@
 
 .overflow-auto {
     overflow: auto;
+}
+
+.vertical-line {
+    border-left: 2px solid white;
+    height: 150px;
+}
+
+
+.vertical-line-small {
+    border-left: 2px solid #dee2e6;
+    height: 50px;
+}
+
+
+.input-border {
+    border: 1px solid #ced4da
 }

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.topnav .right-menu a {
+    float: left;
+    color: #6e7794;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 52px;
+}
+
+.topnav .right-menu a:hover {
+    color: #fb815e;
+
+}
+
+.left-menu {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.right-menu {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#enter-icon {
+    transform: rotate(180deg);
+}
+
+#login-btn {
+    background-color: #e2e8f0;
+    width: 96px;
+    height: 30px;
+    padding: 5px;
+    color: #1780df;
+    font-weight: 700;
+}
