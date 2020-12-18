@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<head>
+    <!-- A Bit of setup here. Our page title and page logo and charset-->
+
+    <!-- Charset -->
+    <meta charset="UTF-8">
+
+    <!-- setting aspect ratio-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--linking our external css files to our html -->
+    <title>درمانکده - مشاوره آنلاین و ویزیت حضوری - آزمایش در محل</title>
+    <link rel="shortcut icon" type="images/x-icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/doctors.css">
+
+
+    <style>
+
+    </style>
+</head>
+
+<!-- This script is used for searchbar capability that when clicked on, the magnifier svg will vanish -->
+<script>
+    function hide(){
+        document.getElementById('magnifier-container').style.display='none'
+        document.getElementById('jostejoo-searchbar').style.width='87%'
+        document.getElementById('jostejoo-searchbar').style.border='2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderRadius='10px'
+
+    }
+
+    function show(){
+        document.getElementById('jostejoo-searchbar').style.width='80%'
+        document.getElementById('magnifier-container').style.display='flex'
+        document.getElementById('magnifier-container').style.flexDirection='column'
+        document.getElementById('magnifier-container').style.justifyContent='center'
+        document.getElementById('magnifier-container').style.alignItems='center'
+        document.getElementById('jostejoo-searchbar').style.borderTop='2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderBottom='2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderLeft='2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderRight='none'
+        document.getElementById('jostejoo-searchbar').style.borderTopLeftRadius='10px'
+        document.getElementById('jostejoo-searchbar').style.borderBottomLeftRadius='10px'
+        document.getElementById('jostejoo-searchbar').style.borderTopRightRadius='0px'
+        document.getElementById('jostejoo-searchbar').style.borderBottomRightRadius='0px'
+        d
+
+
+
+    }
+</script>
+<body>
+
+<header>
+    <!--Whole header is in this header container where it is a row flex where the logo resides in right and other menue elements reside in left-->
+    <div class="header-container">
+        <div class="header-logo"></div>
+        <div class="header-list">
+            <svg style="font-size: 15px" data-v-49015c94="" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                 height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 class="mr-0 dr-menu__icon feather feather-align-justify">
+                <line data-v-49015c94="" x1="21" y1="10" x2="3" y2="10"></line>
+                <line data-v-49015c94="" x1="21" y1="6" x2="3" y2="6"></line>
+                <line data-v-49015c94="" x1="21" y1="14" x2="3" y2="14"></line>
+                <line data-v-49015c94="" x1="21" y1="18" x2="3" y2="18"></line>
+            </svg>
+            <div class="header-text">لیست تخصص ها</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="mr-0 dr-menu__icon feather feather-wifi" data-v-49015c94="">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" data-v-49015c94=""></path>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" data-v-49015c94=""></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" data-v-49015c94=""></path>
+                <line x1="12" y1="20" x2="12" y2="20" data-v-49015c94=""></line>
+            </svg>
+            <div class="header-text">لیست مشاوره آنلاین</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dr-menu__icon feather feather-book" data-v-49015c94="">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-49015c94=""></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-49015c94=""></path>
+            </svg>
+            <div class="header-text">مجله پزشکی</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dr-menu__icon feather feather-user-plus" data-v-49015c94="">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" data-v-49015c94=""></path>
+                <circle cx="8.5" cy="7" r="4" data-v-49015c94=""></circle>
+                <line x1="20" y1="8" x2="20" y2="14" data-v-49015c94=""></line>
+                <line x1="23" y1="11" x2="17" y2="11" data-v-49015c94=""></line>
+            </svg>
+            <div class="header-text">عضویت پزشکان</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dr-menu__icon feather feather-box" data-v-49015c94="">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      data-v-49015c94=""></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" data-v-49015c94=""></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12" data-v-49015c94=""></line>
+            </svg>
+            <div class="header-text">کرونا سازمانی</div>
+        </div>
+
+
+            <div id="vorood-text">
+                <svg style="size: 60px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="flip-horizontal feather feather-log-in" data-v-0fb0a4cb="">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" data-v-0fb0a4cb=""></path>
+                    <polyline points="10 17 15 12 10 7" data-v-0fb0a4cb=""></polyline>
+                    <line x1="15" y1="12" x2="3" y2="12" data-v-0fb0a4cb=""></line>
+                </svg>
+                ورود
+
+
+
+        </div>
+    </div>
+</header>
+
+<!-- This section represents the doctors list and the right side menu of it. This part has navbar list, a right container for search capabilities  -->
+<!-- And also the middle container for doctors list. Each doctor card is a css class called doctor. We have instantiated 3 of them here -->
+<!-- On right side, for our searchbar we have used javascript so that the magnifier svg will vanish upon click on the searchbar -->
+<section id="doctors-list">
+    <div id="navbar-top"><a id="navbar-top-link" href="#">درمانکده ></a> <span id="navbar-top-span"> متخصص مغز و اعصاب (نورولوژی) </span>
+    </div>
+    <div id="navbar-container">
+        <div id="navbar">
+            <h1 id="navbar-top-header">لیست بهترین متخصص مغز و اعصاب(نورولوژی) برای مشاوره آنلاین و حضوری</h1>
+            <p id="navbar-text">ویزیت حضوری و مشاوره آنلاین (تصویری، صوتی و متنی) با بهترین پزشکان متخصص مغز و
+                اعصاب(نورولوژی) در تهران</p>
+        </div>
+
+    </div>
+    <div id="midle-conatiner">
+        <div id="right-container">
+            <div id="search-top-image-container"></div>
+            <div id="right-search-container">
+                <div id="search-top-container"><h5 id="jostejoo-dar-natayej">جستجو در نتایج</h5></div>
+
+                <div id="jostejoo-searchbar-container">
+                    <div id="magnifier-container">
+                        <svg id="help" data-v-027aed6c="" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="position-absolute search-icon text-steel feather feather-search"><circle data-v-027aed6c="" cx="11" cy="11" r="8"></circle><line data-v-027aed6c="" x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <input onclick="hide()" onfocusout="show()" type="text" id="jostejoo-searchbar" lang="ar-sa" placeholder="نام یا نام خانوادگی پزشک را بنویسید "/>
+                </div>
+            </div>
+            <a href="#" class="right-side-dropdown">
+                <svg data-v-90eca2a0="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-expanded="false" aria-controls="collapse-4"
+                     class="custom-class text-water-blue feather feather-chevron-down collapsed">
+                    <polyline data-v-90eca2a0="" points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <p class="right-side-dropdown-text">تخصص ها </p></a>
+
+            <a href="#" class="right-side-dropdown">
+                <svg data-v-90eca2a0="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-expanded="false" aria-controls="collapse-4"
+                     class="custom-class text-water-blue feather feather-chevron-down collapsed">
+                    <polyline data-v-90eca2a0="" points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <p class="right-side-dropdown-text">زمان نوبت دهی </p></a>
+
+            <a href="#" class="right-side-dropdown">
+                <svg data-v-90eca2a0="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-expanded="false" aria-controls="collapse-4"
+                     class="custom-class text-water-blue feather feather-chevron-down collapsed">
+                    <polyline data-v-90eca2a0="" points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <p class="right-side-dropdown-text">بیمارستان</p></a>
+
+            <a href="#" class="right-side-dropdown">
+                <svg data-v-90eca2a0="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-expanded="false" aria-controls="collapse-4"
+                     class="custom-class text-water-blue feather feather-chevron-down collapsed">
+                    <polyline data-v-90eca2a0="" points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <p class="right-side-dropdown-text">جنسیت </p></a>
+
+            <a href="#" class="right-side-dropdown">
+
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <p class="right-side-dropdown-text">نمایش پزشکان دارای مشاوره آنلاین </p></a>
+        </div>
+        <div id="doctors-list-container">
+            <div id="sort">
+                <svg data-v-027aed6c="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="ml-2 feather feather-sliders">
+                    <line data-v-027aed6c="" x1="4" y1="21" x2="4" y2="14"></line>
+                    <line data-v-027aed6c="" x1="4" y1="10" x2="4" y2="3"></line>
+                    <line data-v-027aed6c="" x1="12" y1="21" x2="12" y2="12"></line>
+                    <line data-v-027aed6c="" x1="12" y1="8" x2="12" y2="3"></line>
+                    <line data-v-027aed6c="" x1="20" y1="21" x2="20" y2="16"></line>
+                    <line data-v-027aed6c="" x1="20" y1="12" x2="20" y2="3"></line>
+                    <line data-v-027aed6c="" x1="1" y1="14" x2="7" y2="14"></line>
+                    <line data-v-027aed6c="" x1="9" y1="8" x2="15" y2="8"></line>
+                    <line data-v-027aed6c="" x1="17" y1="16" x2="23" y2="16"></line>
+                </svg>
+
+                <h5 id="morattab-sazi-text"> : مرتب سازی بر اساس</h5>
+                <a href="#" id="selected-sort-button">منتخب</a>
+                <a href="#" class="un-selected-sort-button">بیشترین رضایتمندی</a>
+                <a href="#" class="un-selected-sort-button">زودترین نوبت</a></div>
+
+
+            <div class="doctor">
+                <div class="doctor-right-container">
+                    <div id="doctor1-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header">مهران جلالی</h5>
+                    <h6 class="doctor-field-header">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <p class="number-of-comments">(۱۲ نظر )</p>
+                        </div>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند &#128512; "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a=""><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path><circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle></svg>
+                            <div class="doctor-detail-top-left-text">تهران | یاخچی آباد</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-50fd7d5a=""></path></svg>
+                            <div class="doctor-detail-top-left-text">تجربه کاری ۲۷ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a=""><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" data-v-50fd7d5a=""></path></svg>
+                            <div class="doctor-detail-top-left-text">۹۴ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg  id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon feather feather-heart text-water-blue"><path data-v-50fd7d5a="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="doctor">
+                <div class="doctor-right-container">
+                    <div id="doctor2-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header">شیوا امامی</h5>
+                    <h6 class="doctor-field-header">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <p class="number-of-comments">(۱۴ نظر )</p>
+                        </div>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph">" بسیار دلسوز و با دقت "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a=""><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path><circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle></svg>
+                            <div class="doctor-detail-top-left-text">تهران | نظام آباد </div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-50fd7d5a=""></path></svg>
+                            <div class="doctor-detail-top-left-text">تجربه کاری ۷ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a=""><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" data-v-50fd7d5a=""></path></svg>
+                            <div class="doctor-detail-top-left-text">۸۵ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg  id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon feather feather-heart text-water-blue"><path data-v-50fd7d5a="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali">اولین نوبت خالی شنبه ۹ اسفند</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="doctor">
+                <div class="doctor-right-container">
+                    <div id="doctor3-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header">رضا مرادی</h5>
+                    <h6 class="doctor-field-header">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
+                            <p class="number-of-comments">(۴ نظر )</p>
+                        </div>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph">" خیلی برخورد صمیمی و گرمی داشتند و فوق العاده حاذق  "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a=""><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path><circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle></svg>
+                            <div class="doctor-detail-top-left-text">تهران | دروازه غار</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-50fd7d5a=""></path></svg>
+                            <div class="doctor-detail-top-left-text">تجربه کاری ۱۲ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a=""><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" data-v-50fd7d5a=""></path></svg>
+                            <div class="doctor-detail-top-left-text">۸۸ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg  id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon feather feather-heart text-water-blue"><path data-v-50fd7d5a="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali">اولین نوبت خالی پنجشنبه ۲۰ اسفند</div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- This sections represents the blue "Har anche lazem ast bedanid" part. It consists of a big container and several paragraphs and inner spans for making some parts of text bold -->
+<section id="har-anche">
+    <div id="har-anche-container">
+        <h5 id="har-anche-header">هر آنچه باید از <span style="font-weight: bold; color: #1780df">متخصص مغز و اعصاب ( نورولوژی )</span> بدانید !</h5>
+        <p id="har-anche-paragraph">سیستم عصبی انسان به دو دسته کلی اعصاب مرکزی ( مغز و نخاع ) و اعصاب محیطی ( اعصاب و نورون های عضلات ) تقسیم می شود. تمام بیماری هایی که هر یک از این قسمت ها را درگیر کند، توسط پزشک <span style="font-weight: bold">متخصص مغز و اعصاب</span> درمان می شود.</p>
+        <p id="har-anche-short-paragraph"><span style="font-weight: bold">پزشک مغز و اعصاب </span> بیماری هایی از قبیل انواع سردرد و ناتوانی های حرکتی را تشخیص می دهد و درمان می کند.</p>
+        <div id="har-anche-button-container">
+            <a href="#" id="bishtar-bekhanid-button">
+                <p id="bishtar-bekhanid-text">بیشتر بخوانید</p>
+                <svg style="margin-top: 5px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" data-v-49b196be=""><polyline points="6 9 12 15 18 9" data-v-49b196be=""></polyline></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- This part represents questions. It consists of a big flex div, a heading and multiple instantiation of row-flex divs for questions. The blue elements were taken from the original site -->
+<section id="questions">
+    <div id="questions-container">
+        <h4 id="questions-header">متخصص مغز و اعصاب ( نورولوژی ) </h4>
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 بیماران چه زمانی باید به متخصص مغز و اعصاب یا جراح مغز و اعصاب و یا به روانپزشک مراجعه کنند؟  </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 سردرد ها چند دسته هستند و راه های درمان آن چیست؟</p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 رعایت کردن چه نکاتی باعث کاهش سردرد ها به خصوص سردرد های میگرنی میشود؟ </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 روش های جلو گیری از سکته مغزی چیست؟  </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 آلزایمر چیست؟  </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 نشانه های تومور مغزی چیست؟  </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 علت تشنج و راه های درمان آن چیست؟ </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088 روش های بیماری صرع چیست؟  </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088  بیماری ام اس چیست و نشانه ها و راه های درمان آن چیست؟  </p>
+            </div>
+        </div>
+
+        <div class="questions-auxiliary-container">
+            <div class="questions-mini-container">
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <p class="question-paragraph"> &#11088  علائم اولیه مننژیت چیست؟ </p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- This patch is used to cover an empty place between these two sections so that our website looks monolithic -->
+<div id="background-patch"></div>
+
+
+<!-- This one represents our services. It is a big column flex. In first row we have the header. Then, we'll have two symmetrical column flex, each having a picture, a paragraph and a button at the bottom -->
+<section id="services">
+    <div id="service-container">
+        <div id="service-top-text-container"><h5 id="service-top-header">خدمات ویژه درمانکده برای مقابله با کرونا یا
+            کووید-19</h5></div>
+        <block id="service-buttom-container">
+            <div id="service-right-bottom-container">
+                <div id="service-right-image-container"></div>
+                <h4 class="right-service-header">تست PCR و آنتی بادی در محل</h4>
+                <p class="right-service-text">اگر در شهر های تهران، مشهد، اصفهان، کرج، شیراز و اهواز هستید، می توانید
+                    بدون
+                    مراجعه به آزمایشگاه و در محل مدنظر خود آزمایش کرونا بدهید.</p>
+                <div class="service-right-button-container">
+                    <a href="#" class="service-right-button"> < درخواست آزمایش </a>
+                </div>
+            </div>
+            <div id="service-left-bottom-container">
+                <div id="service-left-image-container"></div>
+                <h4 class="right-service-header">تست PCR و آنتی بادی در محل</h4>
+                <p class="right-service-text">با تست آنلاین کرونا علائم خود رابررسی کنید و اگر مشکوک بودید می توانید به
+                    صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید</p>
+                <div class="service-right-button-container">
+                    <a href="#" class="service-right-button">< دریافت مشاوره فوری</a>
+                </div>
+            </div>
+        </block>
+    </div>
+
+</section>
+
+<!-- Here we have our download section. It is a big row flex. On right, we have a column flex residing our image and another flex beneath it representing the icons-->
+<!-- on left, we have another column flex representing headers, paragraphs and our searchbar and finally, our bottom-->
+<section id="download">
+    <div id="download-container">
+        <div class="download-right-container">
+            <div class="download-right-upper-image"></div>
+            <div id="download-right-lower-images-container">
+                <div id="google-image"></div>
+                <div id="apple-image"></div>
+                <div id="bazar-image"></div>
+            </div>
+
+        </div>
+        <div class="download-right-container">
+            <div class="download-left-main-container">
+                <div class="download-left-header-container"><h5 id="dowload-left-upper-header">دانلود اپلیکیشن
+                    درمانکده</h5></div>
+                <div id="download-left-text-container"><p id="left-download-paragraph">با اپلیکیشن درمانکده با پزشکان و
+                    روانشناسان آنلاین مشاوره کنید یا برای ویزیت حضوری آنلاین نوبت بگیرید.</p></div>
+
+                <div class="download-left-header-container"><h5 id="dowload-left-lower-header">.برای دریافت لینک دانلود،
+                    شماره موبایل خود را وارد کنید</h5></div>
+                <div id="download-left-lower-container">
+                    <input type="text" id="download-left-text-box" lang="fa" placeholder=" مانند  *******  ۰۹۱۲ "/>
+                    <div id="download-button-container">
+                        <button class="btn">
+                            <svg style="margin-top: 13px" xmlns="http://www.w3.org/2000/svg" width="1.3em"
+                                 height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-smartphone text-white " data-v-bc20ae4e="">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" data-v-bc20ae4e=""></rect>
+                                <line x1="12" y1="18" x2="12" y2="18" data-v-bc20ae4e=""></line>
+                            </svg>
+                            <span class="download-text">ارسال لینک</span>
+                            <span class="btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Here we have our footer. It is a big column flex. On the first row, we have our logo and our header-->
+<!-- On the second row we have our middle container where it's a forw flex. It has icons in the middle and bottoms on the sides-->
+<!-- The seprating line is indeed another div which only has one segment as border-->
+<!-- Finally we have our paragraph, our Enamad and rezayat images and textbars and bottom followed by the developers credit comment -->
+<footer>
+    <div id="footer-main-container">
+        <div id="footer-logo-main-container">
+            <div id="footer-logo-container"></div>
+        </div>
+        <div id="footer-top-paragraph-main-container">
+            <div id="footer-top-paragraph-secondary-container"><p id="footer-top-paragraph">درمانکده، ارائه دهنده خدمات
+                آنلاین سلامت<br>
+                (نوبت گیری اینترنتی، مشاوره آنلاین، آزمایش در محل و ...)</p></div>
+
+        </div>
+        <div id="footer-middle-container">
+            <div class="footer-side-rectangle-container">
+                <div class="footer-side-box">
+                    <a href="#" class="footer-button">درباره درمانکده</a>
+                </div>
+                <div class="footer-side-box"><a href="#" class="footer-button" style="width: 45%">تماس با ما</a></div>
+                <div class="footer-side-box"><a href="#" class="footer-button" style="width: 50%">مجله پزشکی</a></div>
+            </div>
+            <div id="footer-middle-middle-container">
+                <div id="footer-middle-icon-container">
+                    <div id="instagram-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" class="text-white p-1 feather feather-instagram"
+                             data-v-1c02d2dc="">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" data-v-1c02d2dc=""></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" data-v-1c02d2dc=""></path>
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" data-v-1c02d2dc=""></line>
+                        </svg>
+                    </div>
+                    <div id="twitter-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" class="text-white p-1 feather feather-twitter" data-v-1c02d2dc="">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                  data-v-1c02d2dc=""></path>
+                        </svg>
+                    </div>
+                    <div id="linkedin-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" class="text-white p-1 feather feather-linkedin" data-v-1c02d2dc="">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                  data-v-1c02d2dc=""></path>
+                            <rect x="2" y="9" width="4" height="12" data-v-1c02d2dc=""></rect>
+                            <circle cx="4" cy="4" r="2" data-v-1c02d2dc=""></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div id="footer-line-container">
+                    <div id="dummy-footer-line"></div>
+                </div>
+
+            </div>
+            <div class="footer-side-rectangle-container">
+                <div class="footer-side-box"><a href="#" class="footer-button">سوالات متداول</a></div>
+                <div class="footer-side-box"><a href="#" class="footer-button">قوانین و مقررات</a></div>
+                <div class="footer-side-box"><a href="#" class="footer-button" style="width: 32%">شکایات</a></div>
+
+            </div>
+        </div>
+        <div id="footer-lower-paragraph-container"> با ثبت‌نام در خبرنامه درمانکده، اولین نفری باشید که از جدیدترین<br>
+            خبرها، جشنواره‌ها و تخفیف های ویژه ما مطلع می‌شوید
+        </div>
+        <div id="footer-lower-textbar-container">
+            <div class="footer-top-textbars-container">
+                <input type="text" class="footer-text-bar" lang="ar-sa" placeholder="نام"/>
+                <input type="text" class="footer-text-bar" lang="ar-sa" placeholder="نام خانوادگی"/>
+            </div>
+            <div class="footer-top-textbars-container">
+                <input type="text" class="footer-text-bar" lang="ar-sa" style="width: 100%" placeholder="ایمیل"/>
+            </div>
+            <div id="footer-button-container">
+                <button class="btn">
+                    <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                         xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-arrow-left text-white ">
+                        <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span class="registration-text">عضو می شوم</span>
+                    <span class="btn-inside">&nbsp;&nbsp;</span>
+                </button>
+            </div>
+        </div>
+        <div id="enamad-container">
+            <div id="enamad"></div>
+            <div id="rezayat"></div>
+        </div>
+        <div id="credit">
+            <p class="credit-comment">تمامی حقوق این سایت برای درمانکده محفوظ است</p>
+            <p class="credit-comment">طراحی شده با <span><svg style="fill: orangered;font-size: 10px" data-v-1c02d2dc=""
+                                                              xmlns="http://www.w3.org/2000/svg" width="24px"
+                                                              height="24px" viewBox="0 0 24 24" fill="none"
+                                                              stroke="currentColor" stroke-width="2"
+                                                              stroke-linecap="round" stroke-linejoin="round"
+                                                              class="svg-fill-red feather feather-heart"><path
+                    data-v-1c02d2dc=""
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
+                توسط تیم درمانکده
+            </p>
+        </div>
+    </div>
+
+
+</footer>
+</body>
+</html>
+
+
+
