@@ -135,22 +135,8 @@
     background-color: #1780df;
 }
 
-.footer-ul {
-    width: 167px;
-    list-style-type: none;
-}
 
 
-.footer-ul > li {
-    padding-top: 15px;
-    border-top: 1px solid white;
-}
-
-
-.footer-ul > li:hover {
-    background-color: white;
-    color: #1780df;
-}
 
 #register-box {
     width: 367px;
