@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="bootstrap-overwrite">
 <head>
     <meta charset="UTF-8">
     <title>درمانکده-لیست تخصص ها</title>
     <link rel="stylesheet" href="../css/common-style.css">
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/medical-specialties.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.3.1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.3.1-dist/js/">
+    <script src="../bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
 <div>
@@ -176,6 +184,7 @@
             </a>
         </div>
         <div class="left-menu">
+
             <a id="login-btn" class="rounded-border-5 clickable">
                 <div class="full-height fle center-content flex-container justify-content-center"
                      style="line-height: 30px">
@@ -184,7 +193,7 @@
                          viewBox="0 0 24 24"
                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                          stroke-linejoin="round"
-                         class="">
+                         class="rotate-180-degree">
                         <path data-v-0fb0a4cb="" d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
                         <polyline data-v-0fb0a4cb="" points="10 17 15 12 10 7"></polyline>
                         <line data-v-0fb0a4cb="" x1="15" y1="12" x2="3" y2="12"></line>
@@ -194,8 +203,620 @@
                 </span>
                 </div>
             </a>
+            <span class="padding-left-20 padding-right-20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-search blue-color" data-v-49015c94="">
+                    <circle cx="11" cy="11" r="8" data-v-49015c94=""></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" data-v-49015c94=""></line>
+                </svg>
+            </span>
         </div>
     </header>
+    <main class="light-background">
+        <div id="main-container" class="horizontal-center">
+
+            <div id="medical-specialties-hero-img" class="horizontal-center"></div>
+            <div id="main-content" class="flex-container row-reverse-flex padding-top-30 padding-bottom-30">
+                <div id="sidebar-container" class="white-background">
+                    <div id="sidebar" class="normal-border rounded-border-10">
+                        <div id="sidebar-header "
+                             class="text-right rtl-direction normal-bottom-border padding-right-20 padding-top-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="ml-3 text-slate feather feather-align-right"
+                                 data-v-513b5ba4="">
+                                <line x1="21" y1="10" x2="7" y2="10" data-v-513b5ba4=""></line>
+                                <line x1="21" y1="6" x2="3" y2="6" data-v-513b5ba4=""></line>
+                                <line x1="21" y1="14" x2="3" y2="14" data-v-513b5ba4=""></line>
+                                <line x1="21" y1="18" x2="7" y2="18" data-v-513b5ba4=""></line>
+                            </svg>
+                            <span style="font-size: 16px" class="text-right">
+                            همه تخصص ها
+                            </span>
+                            <p style="font-size: 12px; color: #6e7794;">
+                                (به ترتیب حروف الفبا)
+                            </p>
+
+                        </div>
+                        <div id="sidebar-main" style="padding:10px">
+                            <div class="rtl-direction horizontal-center text-center normal-border light-background" ;
+                                 style="height: 50px; padding-bottom: 5px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     class="rotate-90-degree blue-color clickable"
+                                     data-v-ab4dbc62="">
+                                    <circle cx="11" cy="11" r="8" data-v-ab4dbc62=""></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" data-v-ab4dbc62=""></line>
+                                </svg>
+
+                                <input style="width: 218px; " class="full-height no-border text-14 light-background"
+                                       placeholder="تخصص مورد نظر را جستجو کنید..."/>
+                            </div>
+                            <div class="rtl-direction overflow-auto text-right padding-top-30" style="height: 700px">
+                                <div>
+                                    <p class="char-square-box light-blue-background rounded-border-5"
+                                       style="display: inline-block">
+                                        ا
+                                    </p>
+                                </div>
+                                <div><span class="text-14 gray-color clickable dashed-underline">ارتوپدی</span></div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اورولوژی کودکان</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">ارتوز و پروتز(ارتوپدی فنی)</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">آسم آلرژی و ایمونولوژی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">استروتاکسی و فانکشنال مغز و اعصاب</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اکوکاردیوگرافی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اندرولوژی و لاپاراسکوپی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اندویورولوژی و لاپاراسکوپی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">آنژیوپلاستی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">آنستزیولوژی-کنترل و درمان دردهای حاد و مزمن</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">آنکولوژی زنان</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اورولوژی کودکان</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اینترونشن نرواسکولار</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اینترونشنال الکتروفیزیولوژی و پیس میکر</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">اینترونشنال کاردیولوژی</span>
+                                </div>
+
+                                <p class="char-square-box light-blue-background rounded-border-5"
+                                   style="display: inline-block">
+                                    ب
+                                </p>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بالون آنژیوپلاستی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بالون آنژیوپلاستی و والوپلاستی</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بیماری های عفونی و تب دار</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بیماریهای پوست و مو</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بیماریهای ریه</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بیماریهای عفونی کودکان</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بیماریهای قلب و عروق</span>
+                                </div>
+                                <div>
+                                    <span class="text-14 gray-color clickable dashed-underline">بیهوشی</span>
+                                </div>
+                                <div class="padding-bottom-300">
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="sidebar-footer" class="light-blue-background blue-color center-content">
+                            <div class="horizontal-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-chevrons-down" data-v-513b5ba4="">
+                                    <polyline points="7 13 12 18 17 13" data-v-513b5ba4=""></polyline>
+                                    <polyline points="7 6 12 11 17 6" data-v-513b5ba4=""></polyline>
+                                </svg>
+                                <span>
+                                اسکرول کنید
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="specialties-list">
+                    <div class="row specialty-row">
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                         گوش، حلق و بینی
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/گوش،%20حلق%20و%20بینی.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار
+                                        اختلالات گوش، بینی، دهان، گلو، ...
+
+                                    </p>
+                                </div>
+                                <div class="specialty-item-footer">
+                                    <div>
+                                        <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                        </button>
+                                        <span class="margin-left-10">
+                                            <img class="doctors-profile-img circle-imag"
+                                                 src="../icons/medical-specialties/1.jpg">
+                                            <img class="doctors-profile-img circle-imag"
+                                                 src="../icons/medical-specialties/2.jpg">
+                                            <img class="doctors-profile-img circle-imag"
+                                                 src="../icons/medical-specialties/3.jpg">
+                                        </span>
+                                    </div>
+                                    <p class="no-padding-top text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +204 پزشک
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                     <span class="padding-right-15 text-18">
+                                         <b>
+                                        غدد و متابولیسم
+                                         </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/غددو%20متابولیسم.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        متخصص غدد و متابولیسم پزشکی است که بیماری‌های هورمونی را به طور کامل مطالعه کرده
+                                        و بهترین درمان‌های ممکن ...
+
+                                    </p>
+                                </div>
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/11.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/12.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/13.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +78 پزشک
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                        گوارش و کبد
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/گوارش%20و%20کبد.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color">
+                                        متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه
+                                        تشخیص، ارزیابی و درمان اختلالا ...
+                                    </p>
+                                </div>
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/21.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/22.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/23.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +109 پزشک
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row specialty-row">
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                        زنان و زایمان
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/مغز%20و%20اعصاب.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه
+                                        تشخیص، ارزیابی و درمان اختلالا ...
+                                    </p>
+                                </div>
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/31.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/32.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/33.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +14 پزشک
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                        خون و آنکلوژی
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/خون%20و%20آنکلوژی.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        پزشکی که به پیشگیری، تشخیص، درمان و مطالعه بیماری های مربوط به خون و بافت های
+                                        سازنده خون که شامل اختلالات ...
+
+                                    </p>
+                                </div>
+
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/41.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/42.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/43.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +14 پزشک
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                        مغز و اعصاب
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/زنان%20و%20زایمان.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی (اعصاب
+                                        و نورون‌های عضلات) تقسیم ...
+                                    </p>
+                                </div>
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/51.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/52.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/53.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +131 پزشک
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row specialty-row">
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-10 text-18">
+                                        <b>
+                                        جراحی مغز و اعصاب
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/پوست%20و%20مو.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        پزشکی که در زمینه پیشگیری، تشخیص، جراحی‌ مغز و توانبخشی اختلالاتی که بر هر بخش
+                                        از دستگاه عصبی شامل اعصاب ...
+                                    </p>
+                                </div>
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/61.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/62.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/63.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +54 پزشک
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                        روماتولوژی
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon" src="../icons/medical-specialties/روماتولوژی.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        روماتولوژیست یا متخصص روماتیسم متخصص داخلی و یا یک متخصص اطفال است که برای تشخیص
+                                        و درمان غیر جراحی بیماری ...
+
+                                    </p>
+                                </div>
+
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/71.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/72.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/73.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +71 پزشک
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-4 padding-left-20 padding-right-20 text-center specialty-item-container">
+                            <div class="specialty-item clickable normal-border rounded-border-10">
+                                <div class="specialty-item-header text-right">
+                                    <span class="padding-right-15 text-18">
+                                        <b>
+                                        پوست و مو
+                                        </b>
+                                    </span>
+                                    <img class="specialty-item-icon"
+                                         src="../icons/medical-specialties/جراحی%20مغز%20و%20اعصاب.svg">
+                                </div>
+                                <div class="specialty-item-content">
+                                    <p class="text-12 gray-color text-right rtl-direction">
+                                        پزشکی که به تشخیص، درمان و جلوگیری از بیماری‌های پوست، مو، ناخن، نواحی مایع
+                                        مخاطی در بدن (داخل دهان، بینی ...
+                                    </p>
+                                </div>
+
+                                <div class="specialty-item-footer">
+                                    <button class="btn see-all-btn">
+                                        <span class="text-14">
+                                        <svg data-v-35f6788e="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                             class="mr-2 mr-md-0 feather feather-arrow-left">
+                                            <line data-v-35f6788e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline data-v-35f6788e="" points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        مشاهده
+                                        </span>
+                                    </button>
+                                    <span class="margin-left-10">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/81.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/82.jpg">
+                                        <img class="doctors-profile-img circle-imag"
+                                             src="../icons/medical-specialties/83.jpg">
+                                    </span>
+                                    <p class="text-10 gray-color font-weight-bold rtl-direction text-right padding-right-20">
+                                        +178 پزشک
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content water-blue-background">
+            <div class="row">
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+                    <div class="pr-md-5 text-right">
+                        <img src="../images/landing/logo.svg"/>
+                        <p class="rtl-direction text-right text-14 white-color pt-3 mr-0" style="width: 253px">
+                            درمانکده، ارائه دهنده خدمات آنلاین سلامت
+                            (نوبت گیری اینترنتی، مشاوره آنلاین، آزمایش در محل و ...)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="full-width row no-gutters text-12 container-lr-5-per-padding"
+             style="height: 45px; line-height: 40px">
+            <div class="half-width full-height text-left col-6">
+                طراحی شده با
+                <span>
+                    <svg style="fill: red" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                         viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="no-border svg-fill-red feather feather-heart" data-v-00d37129=""><path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                            data-v-00d37129=""></path></svg>
+                </span>
+                توسط تیم درمانکده
+            </div>
+
+            <div class="half-width full-height text-right col-6">
+                تمامی حقوق این سایت برای درمانکده محفوظ است
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
+
