@@ -1,0 +1,190 @@
+/* css code for login.html */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Vazir', sans-serif;
+}
+
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#whole-container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#right-main-container {
+    background-color: #1780df;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 33%;
+    padding-top: 10px;
+}
+
+#left-main-container {
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-label {
+
+    width: 80px;
+    height: 20px;
+    color: #6e7794;
+    direction: rtl;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    position: absolute;
+    right: 740px;
+    top: 202px;
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+#top-label-text {
+    margin-top: 7px;
+}
+
+#logo-container {
+
+    width: 61%;
+    height: 18%;
+    background-image: url("../images/loginlogo.svg");
+    background-repeat: no-repeat;
+    Background-size: contain;
+    margin-right: 30px;
+    margin-left: 60px;
+    margin-top: 0px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+#welcome-header {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: right;
+    direction: rtl;
+}
+
+#introduction {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    direction: rtl;
+    margin-top: 20px;
+}
+
+#left-text {
+    color: #3b4157;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 60px;
+}
+
+#phone-text-box {
+    background-color: white;
+    border: 1px solid #6e7794;
+    width: 40%;
+    height: 8%;
+    direction: rtl;
+    text-align: right;
+    language: "ar-sa";
+    padding-right: 15px;
+    font-size: 15px;
+    border-radius: 9px
+}
+
+
+#search-button {
+    background-color: #fb815e;
+    border: 0px;
+    height: 6%;
+    width: 42%;
+    text-align: center;
+    padding-top: 8px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+    direction: rtl;
+    text-align: center;
+
+}
+
+#code-moarref {
+
+    margin-top: 30px;
+    Border: 1px solid #fb815e;
+    border-radius: 10px;
+    height: 5%;
+    width: 14%;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fb815e;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+    padding-top: 14px;
+}
+
+#code-moarref:hover {
+    background-color: #fb815e;
+    color: white;
+}
+
+#google-icon {
+    font-size: 40px;
+    margin-top: 40px;
+    background-image: url("../images/google.png");
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+}
+
+#google-login-text {
+    text-decoration: none;
+    margin-top: 10px;
+    border-bottom: 1px dashed;
+    border-top: 0;
+    padding-bottom: 3px;
+    color: #1780df;
+    font-weight: 700 !important;
+}
+
+#google-login-text:hover{
+    color: #fb815e;
+}
+
+
+
+
+
