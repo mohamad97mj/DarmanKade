@@ -1,0 +1,135 @@
+#medical-specialties-hero-img {
+
+    width: 1185px;
+    height: 297px;
+    background-image: url("../images/medical-specialties/specialties-hero.png");
+    background-size: cover;
+
+}
+
+main {
+    padding-top: 30px;
+
+}
+
+#main-container {
+    width: 1184px;
+
+}
+
+#main-right-container {
+    margin-left: 20px;
+}
+
+#main-right-content {
+    width: 282px;
+    height: 882px;
+    position: sticky;
+    top: 0;
+}
+
+#sidebar-header {
+    height: 83px
+}
+
+#sidebar-main {
+    padding : 15px;
+    height: 750px
+}
+
+#sidebar-footer {
+    bottom: 0;
+    position: sticky;
+    height: 50px;
+    line-height: 50px;
+}
+
+.sidebar-item {
+    color: #6e7794;
+    font-size: 14px;
+}
+
+#specialties-list {
+    width: 888px;
+}
+
+#main-content {
+    height: 1300px;
+}
+
+.specialty-row {
+    height: 290px;
+
+}
+
+.specialty-item-container {
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.specialty-item {
+    padding: 20px;
+    height: 100%;
+    background-color: white;
+}
+
+.specialty-item:hover {
+    border: 1px solid #fb815e;
+}
+
+.specialty-item-icon {
+    width: 52px;
+    height: 52px;
+}
+
+
+.specialty-item-header {
+    height: 33%;
+}
+
+.specialty-item-content {
+    height: 34%;
+}
+
+.specialty-item-footer {
+    height: 33%;
+}
+
+.see-all-btn {
+    width: 114px;
+    height: 50px;
+    border: 2px solid #fb815e!important;
+    color: #fb815e !important;
+    font-weight: 700 !important;
+}
+
+.see-all-btn:hover {
+    background-color: #fb815e;
+    color: white !important;
+
+}
+
+.doctors-profile-img {
+    width: 30px;
+    height: 30px;
+    margin-left: -10px;
+}
+
+.specialty-link:hover {
+    text-decoration: dashed;
+    /*background-color: black;*/
+}
+
+footer {
+    height: 240px;
+
+}
+
+footer .footer-content {
+    padding: 30px 0 30px 0;
+    height: 240px;
+}
+
+
+

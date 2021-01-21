@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<head>
+    <!-- A Bit of setup here. Our page title and page logo and charset-->
+
+    <!-- Charset -->
+    <meta charset="UTF-8">
+
+    <!-- setting aspect ratio-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--linking our external css files to our html -->
+    <title>درمانکده - مشاوره آنلاین و ویزیت حضوری - آزمایش در محل</title>
+    <link rel="shortcut icon" type="images/x-icon" href="images/favicon.ico"/>
+    <link href="icons/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="icons/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v[27.0.2]/dist/font-face.css" rel="stylesheet" type="text/css"/>
+
+
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+<header>
+    <!--Whole header is in this header container where it is a row flex where the logo resides in right and other menue elements reside in left-->
+    <div class="header-container">
+        <div class="header-logo"></div>
+        <div class="header-list">
+            <svg style="font-size: 15px" data-v-49015c94="" xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                 height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 class="mr-0 dr-menu__icon feather feather-align-justify">
+                <line data-v-49015c94="" x1="21" y1="10" x2="3" y2="10"></line>
+                <line data-v-49015c94="" x1="21" y1="6" x2="3" y2="6"></line>
+                <line data-v-49015c94="" x1="21" y1="14" x2="3" y2="14"></line>
+                <line data-v-49015c94="" x1="21" y1="18" x2="3" y2="18"></line>
+            </svg>
+            <div class="header-text">لیست تخصص ها</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="mr-0 dr-menu__icon feather feather-wifi" data-v-49015c94="">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" data-v-49015c94=""></path>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" data-v-49015c94=""></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" data-v-49015c94=""></path>
+                <line x1="12" y1="20" x2="12" y2="20" data-v-49015c94=""></line>
+            </svg>
+            <div class="header-text">لیست مشاوره آنلاین</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dr-menu__icon feather feather-book" data-v-49015c94="">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-49015c94=""></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-49015c94=""></path>
+            </svg>
+            <div class="header-text">مجله پزشکی</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dr-menu__icon feather feather-user-plus" data-v-49015c94="">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" data-v-49015c94=""></path>
+                <circle cx="8.5" cy="7" r="4" data-v-49015c94=""></circle>
+                <line x1="20" y1="8" x2="20" y2="14" data-v-49015c94=""></line>
+                <line x1="23" y1="11" x2="17" y2="11" data-v-49015c94=""></line>
+            </svg>
+            <div class="header-text">عضویت پزشکان</div>
+        </div>
+        <div class="header-list">
+            <svg style="font-size: 15px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dr-menu__icon feather feather-box" data-v-49015c94="">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      data-v-49015c94=""></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" data-v-49015c94=""></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12" data-v-49015c94=""></line>
+            </svg>
+            <div class="header-text">کرونا سازمانی</div>
+        </div>
+
+
+        <div id="vorood-text" onclick="login()" >
+            <svg style="size: 60px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="flip-horizontal feather feather-log-in" data-v-0fb0a4cb="">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" data-v-0fb0a4cb=""></path>
+                <polyline points="10 17 15 12 10 7" data-v-0fb0a4cb=""></polyline>
+                <line x1="15" y1="12" x2="3" y2="12" data-v-0fb0a4cb=""></line>
+            </svg>
+            ورود
+
+
+
+        </div>
+    </div>
+</header>
+
+<!-- This is our search bar. It's main container is a columns flex residing two row flex. One for the title and other for search bar and search button -->
+<section id="searchBar">
+    <div id="search-background">
+        <div id="search-upper-box">
+            <div id="search-upper-box-text">
+                درمانکده- مشاوره آنلاین و حضوری
+            </div>
+        </div>
+        <div id="search-box-container">
+            <input type="text" id="search-text-bar" lang="ar-sa"
+                   placeholder="نام تخصص، پزشک یا محله مورد نظر را جستجو کنید"/>
+            <div id="search-box-icon-container-container">
+                <div id="search-box-icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pr-2 m-auto text-light-gray-blue custom-class border-right feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+            </div>
+            <select class="select-css" style="direction: rtl">
+                <option>تهران</option>
+                <option>شهر قدس</option>
+                <option>رودهن</option>
+                <option>مشهد</option>
+                <option>پاکدشت</option>
+            </select>
+
+            <a href="#" id="search-button">جستجو</a>
+        </div>
+    </div>
+</section>
+
+<!-- Here we have an upper row flex div for the two texts followed by another row flex where we have our css cardboards introducing each of specializations -->
+<section id="specializations">
+    <div id="specialization-container">
+        <div id="card-top">
+            <div id="behtarin">بهترین تخصص های درمانکده</div>
+            <a id="moshahede-hame" href="medical-specialties.html"> < مشاهده همه </a>
+        </div>
+        <div id="all-cards-container">
+            <div class="card">
+                <div class="card-background" style="background-color: #e8c9fd;"><img src="images/bone.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle">ارتوپدی</p>
+                </div>
+            </div>
+
+
+            <div class="card" onclick="doctors()">
+                <div class="card-background" style="background-color: #fcbaba;"><img src="images/kidney.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle">اورولوژی</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="doctors()">
+                <div class="card-background" style="background-color: #b3e8ca;"><img src="images/moo.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle">پوست و مو</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="doctors()">
+                <div class="card-background" style="background-color: #abc2d8;"><img src="images/nini.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle">زنان و زایمان</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="doctors()">
+                <div class="card-background" style="background-color: #fbcbee;"><img src="images/kabed.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle">داخی</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="doctors()">
+                <div class="card-background" style="background-color: #c5e1fb;"><img src="images/goosh.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle" style="width: 120px">گوش، حلق و بینی</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="doctors()">
+                <div class="card-background" style="background-color: #fdcdb0;"><img src="images/brain.png"></div>
+                <div class="card-container">
+                    <p class="card-subtitle">مغز و اعصاب</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- This is a big row flex. On right we have our paragraph and its header on left we have the fancy comment section -->
+<section id="comments">
+    <div id="comments-container">
+        <div id="quote-sign-container"></div>
+
+        <!-- This one has absolute position -->
+        <div id="comment-triangle"></div>
+
+        <!-- This one has absolute position -->
+        <div id="commenter-name">نظر ممد</div>
+
+        <div id="right-comment-container">
+            <div id="right-comment-text-container">
+
+                <div id="nazarate-mardom-container"><h4 class="nazarat-mardom-text">
+                    نظرات و روند درمانی بیماران
+                </h4></div>
+
+                <p class="nazarat-mardom-titr">
+                    شما می توانید تجربه مراجعه کاربران دیگر به پزشکان را بخوانید .
+                </p>
+                <p class="nazarat-mardom-titr">و از نظرات بقیه آگاه شوید</p>
+            </div>
+        </div>
+
+        <div id="left-comment-container">
+            <div id="left-comment-paragraph">خیلی دکتر کار درستی بود</div>
+            <div id="comment-lower-left-container">
+                <div id="comment-bottom-picture-container">
+                    <img id="comment-image" src="images/zarandi.png">
+                </div>
+
+                <div id="please">
+                    <div class="nazarate-mardom-container">
+                        <h4  id="doctor-name">
+                            دکتر معصومی
+                        </h4></div>
+
+
+                    <p id="doctor-field">
+                        بیهوشی
+                    </p>
+                </div>
+
+
+                <div id="sayere-nazarat-container">
+                    <a href="#" id="sayere-nazarat-botton">مشاهده سایر نظرات</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- This one represents our services. It is a big column flex. In first row we have the header. Then, we'll have two symmetrical column flex, each having a picture, a paragraph and a button at the bottom -->
+<section id="services">
+    <div id="service-container">
+        <div id="service-top-text-container"><h5 id="service-top-header">خدمات ویژه درمانکده برای مقابله با کرونا یا
+            کووید-19</h5></div>
+        <block id="service-buttom-container">
+            <div id="service-right-bottom-container">
+                <div id="service-right-image-container"></div>
+                <h4 class="right-service-header">تست PCR و آنتی بادی در محل</h4>
+                <p class="right-service-text">اگر در شهر های تهران، مشهد، اصفهان، کرج، شیراز و اهواز هستید، می توانید
+                    بدون
+                    مراجعه به آزمایشگاه و در محل مدنظر خود آزمایش کرونا بدهید.</p>
+                <div class="service-right-button-container">
+                    <a href="#" class="service-right-button"> < درخواست آزمایش </a>
+                </div>
+            </div>
+            <div id="service-left-bottom-container">
+                <div id="service-left-image-container"></div>
+                <h4 class="right-service-header">تست PCR و آنتی بادی در محل</h4>
+                <p class="right-service-text">با تست آنلاین کرونا علائم خود رابررسی کنید و اگر مشکوک بودید می توانید به
+                    صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید</p>
+                <div class="service-right-button-container">
+                    <a href="#" class="service-right-button">< دریافت مشاوره فوری</a>
+                </div>
+            </div>
+        </block>
+    </div>
+
+</section>
+
+<!-- Here we have our download section. It is a big row flex. On right, we have a column flex residing our image and another flex beneath it representing the icons-->
+<!-- on left, we have another column flex representing headers, paragraphs and our searchbar and finally, our bottom-->
+<section id="download">
+    <div id="download-container">
+        <div class="download-right-container">
+            <div class="download-right-upper-image"></div>
+            <div id="download-right-lower-images-container">
+                <div id="google-image"></div>
+                <div id="apple-image"></div>
+                <div id="bazar-image"></div>
+            </div>
+
+        </div>
+        <div class="download-right-container">
+            <div class="download-left-main-container">
+                <div class="download-left-header-container"><h5 id="dowload-left-upper-header">دانلود اپلیکیشن
+                    درمانکده</h5></div>
+                <div id="download-left-text-container"><p id="left-download-paragraph">با اپلیکیشن درمانکده با پزشکان و
+                    روانشناسان آنلاین مشاوره کنید یا برای ویزیت حضوری آنلاین نوبت بگیرید.</p></div>
+
+                <div class="download-left-header-container"><h5 id="dowload-left-lower-header">.برای دریافت لینک دانلود،
+                    شماره موبایل خود را وارد کنید</h5></div>
+                <div id="download-left-lower-container">
+                    <input type="text" id="download-left-text-box" lang="fa" placeholder=" مانند  *******  ۰۹۱۲ "/>
+                    <div id="download-button-container">
+                        <button class="btn">
+                            <svg style="margin-top: 13px" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone text-white " data-v-bc20ae4e=""><rect x="5" y="2" width="14" height="20" rx="2" ry="2" data-v-bc20ae4e=""></rect><line x1="12" y1="18" x2="12" y2="18" data-v-bc20ae4e=""></line></svg>
+                            <span class="download-text">ارسال لینک</span>
+                            <span class="btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Here we have our footer. It is a big column flex. On the first row, we have our logo and our header-->
+<!-- On the second row we have our middle container where it's a forw flex. It has icons in the middle and bottoms on the sides-->
+<!-- The seprating line is indeed another div which only has one segment as border-->
+<!-- Finally we have our paragraph, our Enamad and rezayat images and textbars and bottom followed by the developers credit comment -->
+<footer>
+    <div id="footer-main-container">
+        <div id="footer-logo-main-container">
+            <div id="footer-logo-container"></div>
+        </div>
+        <div id="footer-top-paragraph-main-container">
+            <div id="footer-top-paragraph-secondary-container"><p id="footer-top-paragraph">درمانکده، ارائه دهنده خدمات
+                آنلاین سلامت<br>
+                (نوبت گیری اینترنتی، مشاوره آنلاین، آزمایش در محل و ...)</p></div>
+
+        </div>
+        <div id="footer-middle-container">
+            <div class="footer-side-rectangle-container">
+                <div class="footer-side-box">
+                    <a href="#" class="footer-button">درباره درمانکده</a>
+                </div>
+                <div class="footer-side-box"><a href="#" class="footer-button" style="width: 45%">تماس با ما</a></div>
+                <div class="footer-side-box"><a href="#" class="footer-button" style="width: 50%">مجله پزشکی</a></div>
+            </div>
+            <div id="footer-middle-middle-container">
+                <div id="footer-middle-icon-container">
+                    <div id="instagram-container"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white p-1 feather feather-instagram" data-v-1c02d2dc=""><rect x="2" y="2" width="20" height="20" rx="5" ry="5" data-v-1c02d2dc=""></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" data-v-1c02d2dc=""></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5" data-v-1c02d2dc=""></line></svg></div>
+                    <div id="twitter-container"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white p-1 feather feather-twitter" data-v-1c02d2dc=""><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-1c02d2dc=""></path></svg></div>
+                    <div id="linkedin-container"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white p-1 feather feather-linkedin" data-v-1c02d2dc=""><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" data-v-1c02d2dc=""></path><rect x="2" y="9" width="4" height="12" data-v-1c02d2dc=""></rect><circle cx="4" cy="4" r="2" data-v-1c02d2dc=""></circle></svg></div>
+                </div>
+                <div id="footer-line-container">
+                    <div id="dummy-footer-line"></div>
+                </div>
+
+            </div>
+            <div class="footer-side-rectangle-container">
+                <div class="footer-side-box"><a href="#" class="footer-button">سوالات متداول</a></div>
+                <div class="footer-side-box"><a href="#" class="footer-button">قوانین و مقررات</a></div>
+                <div class="footer-side-box"><a href="#" class="footer-button" style="width: 32%">شکایات</a></div>
+
+            </div>
+        </div>
+        <div id="footer-lower-paragraph-container"> با ثبت‌نام در خبرنامه درمانکده، اولین نفری باشید که از جدیدترین<br>
+            خبرها، جشنواره‌ها و تخفیف های ویژه ما مطلع می‌شوید
+        </div>
+        <div id="footer-lower-textbar-container">
+            <div class="footer-top-textbars-container">
+                <input type="text" class="footer-text-bar" lang="ar-sa" placeholder="نام"/>
+                <input type="text" class="footer-text-bar" lang="ar-sa" placeholder="نام خانوادگی"/>
+            </div>
+            <div class="footer-top-textbars-container">
+                <input type="text" class="footer-text-bar" lang="ar-sa" style="width: 100%" placeholder="ایمیل"/>
+            </div>
+            <div id="footer-button-container">
+                <button class="btn">
+                    <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                    <span class="registration-text">عضو می شوم</span>
+                    <span class="btn-inside">&nbsp;&nbsp;</span>
+                </button>
+            </div>
+        </div>
+        <div id="enamad-container">
+            <div id="enamad"></div>
+            <div id="rezayat"></div>
+        </div>
+        <div id="credit">
+            <p class="credit-comment">تمامی حقوق این سایت برای درمانکده محفوظ است</p>
+            <p class="credit-comment">طراحی شده با <span><svg style="fill: orangered;font-size: 10px" data-v-1c02d2dc="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart"><path data-v-1c02d2dc="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> توسط تیم درمانکده</p>
+        </div>
+    </div>
+
+
+</footer>
+</body>
+<script src="js.js"></script>
+</html>

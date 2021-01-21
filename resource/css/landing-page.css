@@ -1,0 +1,138 @@
+
+/* set style for reservation-box*/
+.reservation-box {
+
+    width: 1184px;
+    height: 280px;
+    background-image: url("../images/landing/reservation-box-background.png");
+    background-size: cover;
+    background-color: #1780df;
+
+}
+
+/* set style for search box */
+
+#search-box {
+    width: 703px;
+    height: 60px;
+}
+
+
+#search-btn {
+    width: 183px;
+}
+
+#search-field {
+    width: 345px;
+    color: #dee2e6;
+}
+
+#location-select {
+    width: 176px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    color: #6e7794;
+}
+
+
+.specialties-box {
+    width: 902px;
+    height: 300px;
+}
+
+
+/* set style for specialty class */
+.specialty {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgba(0, 0, 0, 0.125) !important;
+    border-image: initial !important;
+    width: 125px;
+    height: 100%;
+}
+
+.specialty-icon {
+    width: 103px;
+    height: 85px;
+}
+
+#patient-comments-section {
+    width: 1184px;
+    height: 500px;
+}
+
+
+#patient-comment-box {
+    border: 1px solid #1780df;
+    background-color: #e5f2fe;
+    width: 562px;
+    height: 370px;
+}
+
+#patient-comment {
+    height: 70%;
+}
+
+#commented-dr-box {
+    height: 30%;
+    border-top: 2px dashed #1780df;
+}
+
+
+#commented-dr-profile {
+    width: 70%;
+    /*padding-right: 20px;*/
+}
+
+#comments-btn {
+    color: white;
+    width: 146px;
+    height: 38px;
+}
+
+.commented-dr-profile-photo {
+    width: 75px;
+    height: 75px;
+}
+
+
+#special-service-section {
+    width: 100%;
+    height: 727px;
+    background-image: url("../images/landing/special-sevices-background.png");
+    background-size: cover;
+}
+
+
+.request-service-btn {
+    color: white;
+    width: 320px;
+    height: 72px;
+}
+
+
+.section-margin {
+    margin-bottom: 100px;
+}
+
+.register-form-input {
+    height: 38px;
+    margin: 2px;
+}
+
+#landing-footer {
+    width: 100%;
+    height: 850px;
+    background-color: #1780df;
+}
+
+#register-box {
+    width: 367px;
+}
+
+#register-btn {
+    height: 60px;
+    margin-top: 10px;
+}
+

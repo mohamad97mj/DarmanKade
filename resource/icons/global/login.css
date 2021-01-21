@@ -1,0 +1,180 @@
+
+/* تنظیم کردن صفحه */
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+/* حذف اسکرول */
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* کانتینر اصلی از نوع فلکس ستونی */
+#main-div{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* کانتینر راستی از نوع فلکس ستونی */
+#rdiv{
+    height: 100%;
+    width: 30%;
+    background-color: #1780df;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* کاتنینر چپی از نوع فلکس ستونی */
+#ldiv{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(250,250,250);
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+/* نماد سایت */
+#namad{
+    width: 50%;
+    height: 100px;
+    background-image: url("7bbb5c421234rlogo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* متن خوش آمد گویی */
+#welcome{
+    font-size:  26px;
+    font-weight: bold!important;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+/* متن معرفی سایت */
+#moarrefi{
+    font-size:  16px;
+    font-weight: bold!important;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+/* کاتنینر چپی از نوع فلکس ستونی */
+#ldiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* متن ورود شماره همراه */
+#vorood-shomare-hamrah{
+    font-weight: bold!important;
+    font-size: 18px;
+    text-align: center;
+    direction: rtl;
+}
+/* اینپوت باکس ورود شماره همراه */
+#shomare-hamrah-input{
+    width: 450px;
+    height: 48px;
+    background-color: white;
+    border: 2px solid dimgray;
+    direction: rtl;
+    border-radius: 5px;
+    padding-right:10px;
+    margin-top: 20px;
+}
+
+/* دکمه دریافت کد تایید */
+#daryafte-code-taiid{
+    width: 450px;
+    height: 52px;
+    background-color:  rgb(251,129,94);
+    direction: rtl;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 15px;
+    font-size: 20px;
+    font-weight: bold!important;
+    color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+/* دکمه کد معرف دارید */
+#code-moarref-darid{
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    direction: rtl;
+    color: rgb(251,129,94);
+    border: 1px solid rgb(251,129,94);
+    padding-right: 47px;
+    text-decoration: none;
+    padding-top: 25px;
+    font-size: 18px;
+    font-weight: bold!important;
+    margin-top: 40px;
+
+}
+
+/* هاور برای کد معرف دارید */
+#code-moarref-darid:hover{
+    background-color: rgb(251,129,94);
+    color: white;
+}
+
+/* آیکن ورود با گوگل */
+#icon-vorood{
+    background-image: url("qwqekmf28490.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    margin-top: 25px;
+}
+
+/* متن ورود با گوگل */
+#vorood-ba-google{
+    text-decoration: none;
+    border-bottom: 2px dashed;
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* هاور ورود با گوگل */
+#vorood-ba-google:hover {
+    color: rgb(251, 129, 94);
+    border-color: rgb(251, 129, 94);
+}
+
+/* کانتینر شماره همراه بو پوزیشن ابسولوت */
+#shomare-hamrah{
+    position: absolute;
+    height: 20px;
+    width: 60px;
+    background-color: rgb(250,250,250);
+    top:143px;
+    right: 680px;
+    text-align: center;
+}
+
+/* متن شماره همراه */
+#shomare-hamrah-bala{
+    margin-top: 10px;
+    color: dimgray;
+    font-size: 14px;
+}
