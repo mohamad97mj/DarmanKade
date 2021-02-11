@@ -16,35 +16,38 @@
     <link rel="stylesheet" href="../resource/icons/global/font.css">
     <link rel="stylesheet" href="../resource/css/general.css">
     <link rel="icon" type="image/png" href="../resource/icons/global/favicon.ico"/>
+
 </head>
 
 <!-- This script is used for searchbar capability that when clicked on, the magnifier svg will vanish -->
 <script>
-    function hide(){
-        document.getElementById('magnifier-container').style.display='none'
-        document.getElementById('jostejoo-searchbar').style.width='87%'
-        document.getElementById('jostejoo-searchbar').style.border='2px solid gray'
-        document.getElementById('jostejoo-searchbar').style.borderRadius='10px'
+    function hide() {
+        document.getElementById('magnifier-container').style.display = 'none'
+        document.getElementById('jostejoo-searchbar').style.width = '87%'
+        document.getElementById('jostejoo-searchbar').style.border = '2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderRadius = '10px'
 
     }
 
-    function show(){
-        document.getElementById('jostejoo-searchbar').style.width='80%'
-        document.getElementById('magnifier-container').style.display='flex'
-        document.getElementById('magnifier-container').style.flexDirection='column'
-        document.getElementById('magnifier-container').style.justifyContent='center'
-        document.getElementById('magnifier-container').style.alignItems='center'
-        document.getElementById('jostejoo-searchbar').style.borderTop='2px solid gray'
-        document.getElementById('jostejoo-searchbar').style.borderBottom='2px solid gray'
-        document.getElementById('jostejoo-searchbar').style.borderLeft='2px solid gray'
-        document.getElementById('jostejoo-searchbar').style.borderRight='none'
-        document.getElementById('jostejoo-searchbar').style.borderTopLeftRadius='10px'
-        document.getElementById('jostejoo-searchbar').style.borderBottomLeftRadius='10px'
-        document.getElementById('jostejoo-searchbar').style.borderTopRightRadius='0px'
-        document.getElementById('jostejoo-searchbar').style.borderBottomRightRadius='0px'
+    function show() {
+        document.getElementById('jostejoo-searchbar').style.width = '80%'
+        document.getElementById('magnifier-container').style.display = 'flex'
+        document.getElementById('magnifier-container').style.flexDirection = 'column'
+        document.getElementById('magnifier-container').style.justifyContent = 'center'
+        document.getElementById('magnifier-container').style.alignItems = 'center'
+        document.getElementById('jostejoo-searchbar').style.borderTop = '2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderBottom = '2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderLeft = '2px solid gray'
+        document.getElementById('jostejoo-searchbar').style.borderRight = 'none'
+        document.getElementById('jostejoo-searchbar').style.borderTopLeftRadius = '10px'
+        document.getElementById('jostejoo-searchbar').style.borderBottomLeftRadius = '10px'
+        document.getElementById('jostejoo-searchbar').style.borderTopRightRadius = '0px'
+        document.getElementById('jostejoo-searchbar').style.borderBottomRightRadius = '0px'
+
+
     }
 </script>
-<body>
+<body onload="getDoctors()">
 
 <header>
     <!--Whole header is in this header container where it is a row flex where the logo resides in right and other menue elements reside in left-->
@@ -79,7 +82,6 @@
                  stroke-linejoin="round" class="dr-menu__icon feather feather-book" data-v-49015c94="">
                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-49015c94=""></path>
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-49015c94=""></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-49015c94=""></path>
             </svg>
             <div class="header-text">مجله پزشکی</div>
         </div>
@@ -107,15 +109,17 @@
         </div>
 
 
-            <div id="vorood-text">
-                <svg style="size: 60px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
-                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                     stroke-linejoin="round" class="flip-horizontal feather feather-log-in" data-v-0fb0a4cb="">
-                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" data-v-0fb0a4cb=""></path>
-                    <polyline points="10 17 15 12 10 7" data-v-0fb0a4cb=""></polyline>
-                    <line x1="15" y1="12" x2="3" y2="12" data-v-0fb0a4cb=""></line>
-                </svg>
-                ورود
+        <div id="vorood-text">
+            <svg style="size: 60px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="flip-horizontal feather feather-log-in" data-v-0fb0a4cb="">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" data-v-0fb0a4cb=""></path>
+                <polyline points="10 17 15 12 10 7" data-v-0fb0a4cb=""></polyline>
+                <line x1="15" y1="12" x2="3" y2="12" data-v-0fb0a4cb=""></line>
+            </svg>
+            ورود
+
+
         </div>
     </div>
 </header>
@@ -142,9 +146,16 @@
 
                 <div id="jostejoo-searchbar-container">
                     <div id="magnifier-container">
-                        <svg id="help" data-v-027aed6c="" xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="position-absolute search-icon text-steel feather feather-search"><circle data-v-027aed6c="" cx="11" cy="11" r="8"></circle><line data-v-027aed6c="" x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <svg id="help" data-v-027aed6c="" xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                             height="1.2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             class="position-absolute search-icon text-steel feather feather-search">
+                            <circle data-v-027aed6c="" cx="11" cy="11" r="8"></circle>
+                            <line data-v-027aed6c="" x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
                     </div>
-                    <input onclick="hide()" onfocusout="show()" type="text" id="jostejoo-searchbar" lang="ar-sa" placeholder="نام یا نام خانوادگی پزشک را بنویسید "/>
+                    <input onclick="hide()" onfocusout="show()" type="text" id="jostejoo-searchbar" lang="ar-sa"
+                           placeholder="نام یا نام خانوادگی پزشک را بنویسید "/>
                 </div>
             </div>
             <a href="#" class="right-side-dropdown">
@@ -208,188 +219,887 @@
                 </svg>
 
                 <h5 id="morattab-sazi-text"> : مرتب سازی بر اساس</h5>
-                <a href="#" id="selected-sort-button">منتخب</a>
-                <a href="#" class="un-selected-sort-button">بیشترین رضایتمندی</a>
-                <a href="#" class="un-selected-sort-button">زودترین نوبت</a></div>
+                <a href="#" class="selected-sort-buttons" id="cb1" onclick="select(1)">منتخب</a>
+                <a href="#" class="un-selected-sort-button" id="cb2" onclick="select(2)">بیشترین رضایتمندی</a>
+                <a href="#" class="un-selected-sort-button" id="cb3" onclick="select(3)">زودترین نوبت</a></div>
 
 
-            <div class="doctor" onclick="redirect('doctor.html?id=1')">
+            <div class="doctor" id='doc1' onclick="redirect('doctor.html?id=1')">
                 <div class="doctor-right-container">
                     <div id="doctor1-image-container"></div>
                 </div>
                 <div class="doctor-middle-container">
-                    <h5 class="doctor-name-header">مهران جلالی</h5>
-                    <h6 class="doctor-field-header">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <h5 class="doctor-name-header" id="dn1">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df1">متخصص مغز و اعصاب (نورولوژی)</h6>
                     <div class="stars-main-container">
-                        <div class="stars-real-container">
-                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <p class="number-of-comments">(۱۲ نظر )</p>
+                        <div class="stars-real-container" id="dsc1">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+
                         </div>
+                        <p class="number-of-comments" id="dc1">(۱۲ نظر )</p>
                     </div>
                     <div class="doctor-comment-container">
-                        <p class="doctor-comment-paragraph">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند &#128512; "</p>
+                        <p class="doctor-comment-paragraph" id="dcp1">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
                     </div>
                 </div>
                 <div class="doctor-left-container">
                     <div class="doctor-blue-box">
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a=""><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path><circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle></svg>
-                            <div class="doctor-detail-top-left-text">تهران | یاخچی آباد</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl1">تهران | یاخچی آباد</div>
                         </div>
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-50fd7d5a=""></path></svg>
-                            <div class="doctor-detail-top-left-text">تجربه کاری ۲۷ سال</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de1">تجربه کاری ۲۷ سال</div>
                         </div>
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a=""><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" data-v-50fd7d5a=""></path></svg>
-                            <div class="doctor-detail-top-left-text">۹۴ درصد رضایت کاربران</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw1">۹۴ درصد رضایت کاربران</div>
                         </div>
 
                     </div>
                     <div class="doctor-button-container">
                         <button class="nobat-btn">
-                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
                             <span class="nobat-text">نوبت بگیر!</span>
                             <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
                         </button>
 
                         <a href="#" class="heart-button">
-                            <svg  id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon feather feather-heart text-water-blue"><path data-v-50fd7d5a="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
                         </a>
                     </div>
-                    <div class="avvalin-nobat-khali">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
+                    <div class="avvalin-nobat-khali" id="da1">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
                 </div>
 
 
             </div>
 
 
-            <div class="doctor" onclick="redirect('doctor.html?id=2')">
+            <div class="doctor" id='doc2' onclick="redirect('doctor.html?id=2')">
                 <div class="doctor-right-container">
                     <div id="doctor2-image-container"></div>
                 </div>
                 <div class="doctor-middle-container">
-                    <h5 class="doctor-name-header">شیوا امامی</h5>
-                    <h6 class="doctor-field-header">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <h5 class="doctor-name-header" id="dn2">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df2">متخصص مغز و اعصاب (نورولوژی)</h6>
                     <div class="stars-main-container">
-                        <div class="stars-real-container">
-                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <p class="number-of-comments">(۱۴ نظر )</p>
+                        <div class="stars-real-container" id="dsc2">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+
                         </div>
+                        <p class="number-of-comments" id="dc2">(۱۲ نظر )</p>
                     </div>
                     <div class="doctor-comment-container">
-                        <p class="doctor-comment-paragraph">" بسیار دلسوز و با دقت "</p>
+                        <p class="doctor-comment-paragraph" id="dcp2">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
                     </div>
                 </div>
                 <div class="doctor-left-container">
                     <div class="doctor-blue-box">
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a=""><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path><circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle></svg>
-                            <div class="doctor-detail-top-left-text">تهران | نظام آباد </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl2">تهران | یاخچی آباد</div>
                         </div>
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-50fd7d5a=""></path></svg>
-                            <div class="doctor-detail-top-left-text">تجربه کاری ۷ سال</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de2">تجربه کاری ۲۷ سال</div>
                         </div>
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a=""><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" data-v-50fd7d5a=""></path></svg>
-                            <div class="doctor-detail-top-left-text">۸۵ درصد رضایت کاربران</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw2">۹۴ درصد رضایت کاربران</div>
                         </div>
 
                     </div>
                     <div class="doctor-button-container">
                         <button class="nobat-btn">
-                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
                             <span class="nobat-text">نوبت بگیر!</span>
                             <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
                         </button>
 
                         <a href="#" class="heart-button">
-                            <svg  id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon feather feather-heart text-water-blue"><path data-v-50fd7d5a="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
                         </a>
                     </div>
-                    <div class="avvalin-nobat-khali">اولین نوبت خالی شنبه ۹ اسفند</div>
+                    <div class="avvalin-nobat-khali" id="da2">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
                 </div>
 
 
             </div>
 
 
-            <div class="doctor" onclick="redirect('doctor.html?id=3')">
+            <div class="doctor" id='doc3' onclick="redirect('doctor.html?id=3')">
                 <div class="doctor-right-container">
                     <div id="doctor3-image-container"></div>
                 </div>
                 <div class="doctor-middle-container">
-                    <h5 class="doctor-name-header">یوسف کریمی</h5>
-                    <h6 class="doctor-field-header">متخصص جراجی مغز و اعصاب</h6>
+                    <h5 class="doctor-name-header" id="dn3">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df3">متخصص مغز و اعصاب (نورولوژی)</h6>
                     <div class="stars-main-container">
-                        <div class="stars-real-container">
-                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <svg style="fill:#1780df; color: #1780df; "  xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" data-v-41e50536="" data-v-50fd7d5a=""><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" data-v-41e50536="" data-v-50fd7d5a=""></polygon></svg>
-                            <p class="number-of-comments">(14 نظر )</p>
+                        <div class="stars-real-container" id="dsc3">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
                         </div>
+                        <p class="number-of-comments" id="dc3">(۱۲ نظر )</p>
+
                     </div>
                     <div class="doctor-comment-container">
-                        <p class="doctor-comment-paragraph">" خیلی برخورد صمیمی و گرمی داشتند و فوق العاده حاذق  "</p>
+                        <p class="doctor-comment-paragraph" id="dcp3">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
                     </div>
                 </div>
                 <div class="doctor-left-container">
                     <div class="doctor-blue-box">
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a=""><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path><circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle></svg>
-                            <div class="doctor-detail-top-left-text">تهران | خیابان پیروزی</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl3">تهران | یاخچی آباد</div>
                         </div>
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" data-v-50fd7d5a=""></path></svg>
-                            <div class="doctor-detail-top-left-text">تجربه کاری ۱۲ سال</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de3">تجربه کاری ۲۷ سال</div>
                         </div>
                         <div class="doctor-detail-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a=""><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" data-v-50fd7d5a=""></path></svg>
-                            <div class="doctor-detail-top-left-text">90 درصد رضایت کاربران</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw3">۹۴ درصد رضایت کاربران</div>
                         </div>
 
                     </div>
                     <div class="doctor-button-container">
                         <button class="nobat-btn">
-                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e="" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left text-white "><line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line><polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline></svg>
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
                             <span class="nobat-text">نوبت بگیر!</span>
                             <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
                         </button>
 
                         <a href="#" class="heart-button">
-                            <svg  id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon feather feather-heart text-water-blue"><path data-v-50fd7d5a="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
                         </a>
                     </div>
-                    <div class="avvalin-nobat-khali">اولین نوبت خالی پنجشنبه ۲۰ اسفند</div>
+                    <div class="avvalin-nobat-khali" id="da3">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
                 </div>
 
 
             </div>
+
+
+            <div class="doctor" id='doc4' onclick="redirect('doctor.html?id=4')">
+                <div class="doctor-right-container">
+                    <div id="doctor4-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header" id="dn4">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df4">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container" id="dsc4">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+
+                        </div>
+                        <p class="number-of-comments" id="dc4">(۱۲ نظر )</p>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph" id="dcp4">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl4">تهران | یاخچی آباد</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de4">تجربه کاری ۲۷ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw4">۹۴ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali" id="da4">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="doctor" id='doc5' onclick="redirect('doctor.html?id=5')">
+                <div class="doctor-right-container">
+                    <div id="doctor5-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header" id="dn5">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df5">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container" id="dsc5">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+
+                        </div>
+                        <p class="number-of-comments" id="dc5">(۱۲ نظر )</p>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph" id="dcp5">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl5">تهران | یاخچی آباد</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de5">تجربه کاری ۲۷ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw5">۹۴ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali" id="da5">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="doctor" id='doc6' onclick="redirect('doctor.html?id=6')">
+                <div class="doctor-right-container">
+                    <div id="doctor6-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header" id="dn6">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df6">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container" id="dsc6">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+
+                        </div>
+                        <p class="number-of-comments" id="dc6">(۱۲ نظر )</p>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph" id="dcp6">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl6">تهران | یاخچی آباد</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de6">تجربه کاری ۲۷ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw6">۹۴ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali" id="da6">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
+                </div>
+
+
+            </div>
+            <div class="doctor" id='doc7' onclick="redirect('doctor.html?id=7')">
+                <div class="doctor-right-container">
+                    <div id="doctor7-image-container"></div>
+                </div>
+                <div class="doctor-middle-container">
+                    <h5 class="doctor-name-header" id="dn7">مهران جلالی</h5>
+                    <h6 class="doctor-field-header" id="df7">متخصص مغز و اعصاب (نورولوژی)</h6>
+                    <div class="stars-main-container">
+                        <div class="stars-real-container" id="dsc7">
+                            <svg style="fill:#1780df; color: #1780df; margin-right: 6px; "
+                                 xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-star" data-v-41e50536=""
+                                 data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+                            <svg style="fill:#1780df; color: #1780df; " xmlns="http://www.w3.org/2000/svg" width=".8em"
+                                 height=".8em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"
+                                 data-v-41e50536="" data-v-50fd7d5a="">
+                                <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                        data-v-41e50536="" data-v-50fd7d5a=""></polygon>
+                            </svg>
+
+                        </div>
+                        <p class="number-of-comments" id="dc7">(۱۲ نظر )</p>
+                    </div>
+                    <div class="doctor-comment-container">
+                        <p class="doctor-comment-paragraph" id="dcp7">" آقای دکتر خیلی با صبر و حوصله بر خورد کردند
+                            &#128512;
+                            "</p>
+                    </div>
+                </div>
+                <div class="doctor-left-container">
+                    <div class="doctor-blue-box">
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-map-pin" data-v-50fd7d5a="">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" data-v-50fd7d5a=""></path>
+                                <circle cx="12" cy="10" r="3" data-v-50fd7d5a=""></circle>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dl7">تهران | یاخچی آباد</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-book" data-v-50fd7d5a="">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" data-v-50fd7d5a=""></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="de7">تجربه کاری ۲۷ سال</div>
+                        </div>
+                        <div class="doctor-detail-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="icon-20 feather feather-thumbs-up" data-v-50fd7d5a="">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+                                      data-v-50fd7d5a=""></path>
+                            </svg>
+                            <div class="doctor-detail-top-left-text" id="dw7">۹۴ درصد رضایت کاربران</div>
+                        </div>
+
+                    </div>
+                    <div class="doctor-button-container">
+                        <button class="nobat-btn">
+                            <svg style="font-size: 20px;margin-top: 14px;margin-right: 20px" data-v-bc20ae4e=""
+                                 xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-arrow-left text-white ">
+                                <line data-v-bc20ae4e="" x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline data-v-bc20ae4e="" points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            <span class="nobat-text">نوبت بگیر!</span>
+                            <span class="nobat-btn-inside">&nbsp;&nbsp;</span>
+                        </button>
+
+                        <a href="#" class="heart-button">
+                            <svg id="heart" data-v-50fd7d5a="" xmlns="http://www.w3.org/2000/svg" width="24px"
+                                 height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="heart-icon feather feather-heart text-water-blue">
+                                <path data-v-50fd7d5a=""
+                                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="avvalin-nobat-khali" id="da7">اولین نوبت خالی یک‌شنبه ۲۹ اسفند</div>
+                </div>
+
+
+            </div>
+
+
         </div>
     </div>
+
 </section>
 
+<div id="har-anche-patch"></div>
 <!-- This sections represents the blue "Har anche lazem ast bedanid" part. It consists of a big container and several paragraphs and inner spans for making some parts of text bold -->
-<section id="har-anche">
+<section id="har-anche" style="margin-top: 50px">
     <div id="har-anche-container">
-        <h5 id="har-anche-header">هر آنچه باید از <span style="font-weight: bold; color: #1780df">متخصص مغز و اعصاب ( نورولوژی )</span> بدانید !</h5>
-        <p id="har-anche-paragraph">سیستم عصبی انسان به دو دسته کلی اعصاب مرکزی ( مغز و نخاع ) و اعصاب محیطی ( اعصاب و نورون های عضلات ) تقسیم می شود. تمام بیماری هایی که هر یک از این قسمت ها را درگیر کند، توسط پزشک <span style="font-weight: bold">متخصص مغز و اعصاب</span> درمان می شود.</p>
-        <p id="har-anche-short-paragraph"><span style="font-weight: bold">پزشک مغز و اعصاب </span> بیماری هایی از قبیل انواع سردرد و ناتوانی های حرکتی را تشخیص می دهد و درمان می کند.</p>
+        <h5 id="har-anche-header">هر آنچه باید از <span style="font-weight: bold; color: #1780df">متخصص مغز و اعصاب ( نورولوژی )</span>
+            بدانید !</h5>
+        <p id="har-anche-paragraph">سیستم عصبی انسان به دو دسته کلی اعصاب مرکزی ( مغز و نخاع ) و اعصاب محیطی ( اعصاب و
+            نورون های عضلات ) تقسیم می شود. تمام بیماری هایی که هر یک از این قسمت ها را درگیر کند، توسط پزشک <span
+                    style="font-weight: bold">متخصص مغز و اعصاب</span> درمان می شود.</p>
+        <p id="har-anche-short-paragraph"><span style="font-weight: bold">پزشک مغز و اعصاب </span> بیماری هایی از قبیل
+            انواع سردرد و ناتوانی های حرکتی را تشخیص می دهد و درمان می کند.</p>
         <div id="har-anche-button-container">
             <a href="#" id="bishtar-bekhanid-button">
                 <p id="bishtar-bekhanid-text">بیشتر بخوانید</p>
-                <svg style="margin-top: 5px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" data-v-49b196be=""><polyline points="6 9 12 15 18 9" data-v-49b196be=""></polyline></svg>
+                <svg style="margin-top: 5px" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="feather feather-chevron-down" data-v-49b196be="">
+                    <polyline points="6 9 12 15 18 9" data-v-49b196be=""></polyline>
+                </svg>
             </a>
         </div>
     </div>
@@ -401,71 +1111,133 @@
         <h4 id="questions-header">متخصص مغز و اعصاب ( نورولوژی ) </h4>
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088 بیماران چه زمانی باید به متخصص مغز و اعصاب یا جراح مغز و اعصاب و یا به روانپزشک مراجعه کنند؟  </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 بیماران چه زمانی باید به متخصص مغز و اعصاب یا جراح مغز و اعصاب و
+                    یا به روانپزشک مراجعه کنند؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
                 <p class="question-paragraph"> &#11088 سردرد ها چند دسته هستند و راه های درمان آن چیست؟</p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088 رعایت کردن چه نکاتی باعث کاهش سردرد ها به خصوص سردرد های میگرنی میشود؟ </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 رعایت کردن چه نکاتی باعث کاهش سردرد ها به خصوص سردرد های میگرنی
+                    میشود؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088 روش های جلو گیری از سکته مغزی چیست؟  </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 روش های جلو گیری از سکته مغزی چیست؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088 آلزایمر چیست؟  </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 آلزایمر چیست؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088 نشانه های تومور مغزی چیست؟  </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 نشانه های تومور مغزی چیست؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
                 <p class="question-paragraph"> &#11088 علت تشنج و راه های درمان آن چیست؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088 روش های بیماری صرع چیست؟  </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 روش های بیماری صرع چیست؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088  بیماری ام اس چیست و نشانه ها و راه های درمان آن چیست؟  </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 بیماری ام اس چیست و نشانه ها و راه های درمان آن چیست؟ </p>
             </div>
         </div>
 
         <div class="questions-auxiliary-container">
             <div class="questions-mini-container">
-                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line></svg>
-                <p class="question-paragraph"> &#11088  علائم اولیه مننژیت چیست؟ </p>
+                <svg id="question-svg" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em"
+                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" class="custom-class cursor-pointer feather feather-plus"
+                     data-v-adeba6c6="">
+                    <line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line>
+                    <line x1="5" y1="12" x2="19" y2="12" data-v-adeba6c6=""></line>
+                </svg>
+                <p class="question-paragraph"> &#11088 علائم اولیه مننژیت چیست؟ </p>
             </div>
         </div>
 
@@ -663,10 +1435,12 @@
         </div>
     </div>
 
+    <script src="../resource/js/js.js"></script>
 
 </footer>
+
 </body>
-<script src="../resource/js/js.js"></script>
+
 </html>
 
 
